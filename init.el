@@ -5,7 +5,7 @@
 ;; (package-initialize)
 
 (push (expand-file-name "~/.emacs.d/lisp") load-path)
-
+(push (expand-file-name "~/.emacs.d/john") load-path)
 (let* ((minver "24.4"))
   (when (version< emacs-version minver)
     (error "Emacs v%s or higher is required." minver)))
@@ -116,7 +116,7 @@
   ;; init-evil dependent on init-clipboard
   (require-init 'init-clipboard)
   ;; use evil mode (vi key binding)
-  (require-init 'init-evil)
+  ;;(require-init 'init-evil)
   (require-init 'init-ctags)
   (require-init 'init-bbdb)
   (require-init 'init-gnus)
@@ -125,7 +125,7 @@
   (require-init 'init-term-mode)
   (require-init 'init-web-mode)
   (require-init 'init-company)
-  (require-init 'init-chinese) ;; cannot be idle-required
+  ;;(require-init 'init-chinese) ;; cannot be idle-required
   ;; need statistics of keyfreq asap
   (require-init 'init-keyfreq)
   (require-init 'init-httpd)
@@ -140,6 +140,7 @@
   (require-init 'init-shackle)
   (require-init 'init-dired)
   (require-init 'init-writting)
+
 
   ;; @see https://github.com/hlissner/doom-emacs/wiki/FAQ
   ;; Adding directories under "site-lisp/" to `load-path' slows
@@ -161,6 +162,12 @@
 (when (require 'time-date nil t)
   (message "Emacs startup time: %d seconds."
            (time-to-seconds (time-since emacs-load-start-time))))
+
+;; John's packages
+(load-file "~/.emacs.d/john/key-bindings.el")
+(load-file "~/.emacs.d/john/settings.el")
+;;(require-init 'key-bindings)
+;;(require-init 'settings)
 
 ;;; Local Variables:
 ;;; no-byte-compile: t
