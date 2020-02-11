@@ -166,6 +166,9 @@
 ;; John's packages
 (load-file "~/.emacs.d/john/key-bindings.el")
 (load-file "~/.emacs.d/john/settings.el")
+(load-file "~/.emacs.d/john/sort-todo.el")
+(load-file "~/.emacs.d/john/fzf.el")
+;;(load-file "~/.emacs.d/john/python_conf.el")
 ;;(require-init 'key-bindings)
 ;;(require-init 'settings)
 

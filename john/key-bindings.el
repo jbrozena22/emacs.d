@@ -6,9 +6,9 @@
 (setq use-package-always-ensure t)
 
 ; then define packages you use
-(use-package fzf
-             :bind ("C-t" . fzf))
-
+;; (use-package fzf
+;;              :bind ("C-t" . fzf))
+(global-set-key (kbd "C-t") 'fzf-projectile)
 (global-set-key (kbd "<C-M-left>") 'back-to-indentation)
 ;;(global-set-key (kbd "C-t") 'fzf)
 (global-set-key (kbd "C-f") 'forward-sexp)
@@ -21,3 +21,5 @@
 (global-set-key (kbd "M-z") 'undo)
 (global-set-key (kbd "M-c") 'kill-ring-save)
 (global-set-key (kbd "M-v") 'yank)
+(global-set-key (kbd "C-S-c") 'kill-ring-save)
+(global-set-key (kbd "C-S-v") 'yank)
