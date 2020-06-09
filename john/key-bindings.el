@@ -23,3 +23,7 @@
 (global-set-key (kbd "M-v") 'yank)
 (global-set-key (kbd "C-S-c") 'kill-ring-save)
 (global-set-key (kbd "C-S-v") 'yank)
+(global-set-key (kbd "C-x C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-x C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-x C-<down>") 'shrink-window)
+(global-set-key (kbd "C-x C-<up>") 'enlarge-window)

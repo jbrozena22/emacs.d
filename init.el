@@ -168,6 +168,8 @@
 (load-file "~/.emacs.d/john/settings.el")
 (load-file "~/.emacs.d/john/sort-todo.el")
 (load-file "~/.emacs.d/john/fzf.el")
+(load-file "~/.emacs.d/john/blacken.el")
+(load-file "~/.emacs.d/john/custom-funcs.el")
 ;;(load-file "~/.emacs.d/john/python_conf.el")
 ;;(require-init 'key-bindings)
 ;;(require-init 'settings)
